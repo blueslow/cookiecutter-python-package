@@ -1,6 +1,6 @@
-"""A setuptools based setup module for {{ cookiecutter.package_dist_name }}"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""A setuptools based setup module for {{ cookiecutter.package_dist_name }}"""
 
 from codecs import open
 from os import path
@@ -36,10 +36,10 @@ setup(
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     entry_points={
-        'console_scripts':[
+        'console_scripts': [
             '{{ cookiecutter.repo_name }}={{ cookiecutter.package_dir_name }}.cli:cli',
-            ],
-        },
+        ],
+    },
     include_package_data=True,
     install_requires=requirements,
     license="MIT",
