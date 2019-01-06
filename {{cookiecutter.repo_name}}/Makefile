@@ -47,7 +47,8 @@ coverage:
 	coverage run --source {{ cookiecutter.package_dir_name }} setup.py test
 	coverage report -m
 	coverage html
-	open htmlcov/index.html
+	# open htmlcov/index.html
+	/usr/bin/google-chrome htmlcov/index.html
 
 docs:
 	rm -f docs/{{ cookiecutter.package_dir_name }}.rst
@@ -55,7 +56,8 @@ docs:
 	sphinx-apidoc -o docs/ {{ cookiecutter.package_dir_name }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
-	open docs/_build/html/index.html
+	# open docs/_build/html/index.html
+	/usr/bin/google-chrome docs/_build/html/index.html
 
 release: clean
 	python setup.py sdist upload

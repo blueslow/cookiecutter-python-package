@@ -19,6 +19,21 @@ The new project will be configured with the following by default:
 * Tox_ testing: Setup to easily test for Python 2.7, 3.3, 3.4, 3.5, pypy
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
 * Click: It will install click as a dependency and include a CLI entry point by default. It's easier (for me at least) to delete this when not needed than it is to maintain a seperate branch.
+* Vanilla coverage testing setup with `coverage`.
+
+Requires:
+---------
+* git
+* python
+* virtual environment, e.g. virtualenvwrapper
+* wheel - pip install wheel
+* twine - pip install twine
+* tox - pip install tox
+* coverage - pip install coverage
+* Account on github or Similar
+* Account on Travis CI
+* Account on ReadTheDocs
+
 
 Usage
 -----
@@ -32,7 +47,7 @@ Then:
 * Create a repo and put it there.
 * Add the repo to your Travis CI account.
 * Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
-* Release your package the standard Python way. Here's a release checklist: 
+* Release your package the standard Python way. Here's a release checklist:
   https://gist.github.com/audreyr/5990987
 
 Not Exactly What You Want?
@@ -45,10 +60,10 @@ Similar Cookiecutter Templates
 
 * `Nekroze/cookiecutter-pypackage`_: A fork of this with a PyTest test runner,
   strict flake8 checking with Travis/Tox, and some docs and `setup.py` differences.
-  
-* `tony/cookiecutter-pypackage-pythonic`_: Fork with py2.7+3.3 optimizations. 
+
+* `tony/cookiecutter-pypackage-pythonic`_: Fork with py2.7+3.3 optimizations.
   Flask/Werkzeug-style test runner, ``_compat`` module and module/doc conventions.
-  See ``README.rst`` or the `github comparison view`_ for exhaustive list of 
+  See ``README.rst`` or the `github comparison view`_ for exhaustive list of
   additions and modifications.
 
 * Also see the `network`_ and `family tree`_ for this repo. (If you find
@@ -62,7 +77,7 @@ to create your own version. Or create your own; it doesn't strictly have to
 be a fork.
 
 * Once you have your own version working, add it to the Similar Cookiecutter
-  Templates list above with a brief description. 
+  Templates list above with a brief description.
 
 * It's up to you whether or not to rename your fork/own version. Do whatever
   you think sounds good.
@@ -78,6 +93,7 @@ make my own packaging experience better.
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.org/
+.. _Coverage: https://coverage.readthedocs.io/en/v4.5.x/
 .. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
 .. _`tony/cookiecutter-pypackage-pythonic`: https://github.com/tony/cookiecutter-pypackage-pythonic
 .. _github comparison view: https://github.com/tony/cookiecutter-pypackage-pythonic/compare/audreyr:master...master
